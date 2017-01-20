@@ -1,0 +1,10 @@
+{
+  "port": 9616,
+  "discovery": {
+    "host": "10.10.11.64",
+    "port": 7616
+  },
+  "websockets": {
+    "enabled": true
+  }
+}
