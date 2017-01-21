@@ -8,16 +8,10 @@
   },
   "author": "",
   "license": "ISC",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zacharyrote/mdn-service.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/zacharyrote/mdn-service/issues"
   },
@@ -30,14 +24,10 @@
     "coffee-script": "^1.12.2",
     "config": "^1.24.0",
     "connect": "2.x",
-    "debug": "^2.5.1",
-    "coffee-script": "^1.12.2",
-    "config": "^1.24.0",
-    "connect": "2.x",
+    "core-server": "https://github.com/zacharyrote/core-server#development",
     "cors": "^2.8.1",
     "debug": "^2.5.1",
     "discovery-proxy": "https://github.com/zacharyrote/discovery-proxy#development",
-    "core-server": "https://github.com/zacharyrote/core-server#development",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "external-ip": "^0.2.4",
