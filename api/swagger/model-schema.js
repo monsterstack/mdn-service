@@ -2,6 +2,11 @@
 
 /**
  * @swagger
+ * tags:
+ *  - name: error
+ *    description: 'Everything you need to know about Error'
+ *  - name: health
+ *    description: 'Everything you need to know about Health'
  * definitions:
  *   Health:
  *     type: object
@@ -9,29 +14,12 @@
  *        - cpuPercentUsage
  *        - totalMemPercentageUsage
  *        - loadAvg
- *   AuthorizationRequest:
- *     type: object
- *     required:
- *       - response_type
- *       - client_id
- *       - client_secret
- *       - scope
  *     properties:
- *        response_type:
- *          type: string
- *        client_id:
- *          type: string
- *        client_secret:
- *          type: string
- *        scope:
- *          type: string
- *   AuthorizationResponse:
- *      type: object
- *      required:
- *        - redirect_uri
- *   TokenResponse:
- *      type: object
- *      required:
- *        - access_token
+ *        cpuPercentUsage:
+ *          type: number
+ *        totalMemPercentageUsage:
+ *          type: number
+ *        loadAvg:
+ *          type: number
  *
  */

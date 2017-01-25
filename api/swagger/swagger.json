@@ -9,14 +9,21 @@
     "/health": {
       "get": {
         "description": "Get Health of Service",
+        "tags": [
+          "health"
+        ],
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "responses": {
           "200": {
             "description": "Health",
+            "type": "object",
             "schema": {
-              "$ref": null
+              "$ref": "#/definitions/Health"
             }
           }
         }
@@ -31,45 +38,19 @@
         "totalMemPercentageUsage",
         "loadAvg"
       ]
-    },
-    "AuthorizationRequest": {
-      "type": "object",
-      "required": [
-        "response_type",
-        "client_id",
-        "client_secret",
-        "scope"
-      ],
-      "properties": {
-        "response_type": {
-          "type": "string"
-        },
-        "client_id": {
-          "type": "string"
-        },
-        "client_secret": {
-          "type": "string"
-        },
-        "scope": {
-          "type": "string"
-        }
-      }
-    },
-    "AuthorizationResponse": {
-      "type": "object",
-      "required": [
-        "redirect_uri"
-      ]
-    },
-    "TokenResponse": {
-      "type": "object",
-      "required": [
-        "access_token"
-      ]
     }
   },
   "responses": {},
   "parameters": {},
   "securityDefinitions": {},
-  "tags": []
+  "tags": [
+    {
+      "name": "error",
+      "description": "Everything you need to know about Error"
+    },
+    {
+      "name": "health",
+      "description": "Everything you need to know about Health"
+    }
+  ]
 }
