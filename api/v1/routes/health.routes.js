@@ -13,6 +13,8 @@ module.exports = (app) => {
    *    responses:
    *      200:
    *        description: Health
+   *        schema:
+   *          $ref: #/definitions/Health
    */
     app.get('/health', controller.getHealth(app));
 }
