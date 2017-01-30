@@ -5,6 +5,11 @@ const assert = require('assert');
 describe('mdn-api-binding', () => {
   let Server = require('core-server').Server;
   let server = null;
+
+  /**
+   * Before every test we need to do the following:
+   * 1. Launch an instance of MdnService - port number specified in test/config/default.json
+   */
   before((done) => {
     server = new Server("MdnService", null, null, {});
 
@@ -24,6 +29,12 @@ describe('mdn-api-binding', () => {
 
   });
 
+  /**
+   * This test makes sure all the api(s) for MdnService are available via
+   * ApiBinding.  Note the stubbed minimal ServiceDescriptor for ApiBinding.
+   * It is assumed the MdnService is serving up a valid swagger.json that
+   * accurately described the operations / tags supported by the MdnService.
+   */
   it('api created when binding occurs', (done) => {
 
     let service = {
