@@ -6,3 +6,5 @@ services:
       - "9616:9616"
     volumes:
       - .:/code
+    environment:
+      - HOST_IP=192.168.99.100
