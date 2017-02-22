@@ -10,9 +10,13 @@ const getSwagger = (app) => {
   return (req, res) => {
     let swaggerService = new SwaggerService('/api/v1');
     swaggerService.getSwagger().then((swagger) => {
-      res.status(HttpStatus.OK).send(swagger);
+      if(swagger === null) {
+        new ServiceError(HttpStatus.NOT_FOUND, 'Swagger Not Found').writeResponse(res);
+      } else {
+        res.status(HttpStatus.OK).send(swagger);
+      }
     }).catch((err) => {
-      new Error(HttpStatus.INTERNAL_SERVER_ERROR, err.message).writeResponse(res);
+      new ServiceError(HttpStatus.INTERNAL_SERVER_ERROR, err.message).writeResponse(res);
     });
   }
 }
