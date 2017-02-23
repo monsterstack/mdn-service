@@ -5,7 +5,7 @@
     "port": 7616
   },
   "redis": {
-    "host": "cdsp.digitalfunk.io",
+    "host": "redis.digitalfunk.io",
     "port": 6379
   },
   "stash": {
