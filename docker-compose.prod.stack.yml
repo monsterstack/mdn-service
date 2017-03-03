@@ -5,6 +5,7 @@ services:
     image: mdnservice_web
     ports:
       - "9616:9616"
+      - "9617:9617"
     networks:
       - back-tier
     volumes:
